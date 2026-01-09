@@ -35,8 +35,8 @@ spec:
       containers:
         - name: api-tester-3211
           # 1pro는 본인의 dockerhub username으로 변경해 주세요.
-          image: 1pro/api-tester:3.0.0
-          imagePullPolicy: Always
+          image: zarate02/api-tester:3.0.0
+          imagePullPolicy: Never
           ports:
             - containerPort: 8080
               name: http
