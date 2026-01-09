@@ -52,6 +52,15 @@ pipeline {
                 sh "docker build -t ${DOCKERHUB_USERNAME}/api-tester:${APP_VERSION} ./${CLASS_NUM}/build/docker"
             }
         }
+		
+        stage('컨테이너 업로드') {
+            steps {
+                // DockerHub로 이미지 업로드
+                script{
+                    sh "docker push ${DOCKERHUB_USERNAME}/api-tester:${APP_VERSION}"
+                }
+            }
+        }
 
         stage('쿠버네티스 배포') {
             steps {
