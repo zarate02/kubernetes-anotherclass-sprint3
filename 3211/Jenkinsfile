@@ -8,11 +8,11 @@ pipeline {
 
     environment {
         // 본인의 DockerHub username로 수정 해주세요.
-        DOCKERHUB_USERNAME = '1pro'
+        DOCKERHUB_USERNAME = 'zarate02'
         // 배포용 Github - Sprint3를 Fork 후 Username 변경 해주세요.
-        RELEASE_GITHUB_URL = 'https://github.com/k8s-1pro/kubernetes-anotherclass-sprint3.git'
+        RELEASE_GITHUB_URL = 'https://github.com/${DOCKERHUB_USERNAME}/kubernetes-anotherclass-sprint3.git'
         // App용 Github - Api-Tester App 소스코드를 Fork 후 Username 변경 해주세요.
-        APP_GITHUB_URL = 'https://github.com/k8s-1pro/kubernetes-anotherclass-api-tester.git'
+        APP_GITHUB_URL = 'https://github.com/${DOCKERHUB_USERNAME}/kubernetes-anotherclass-api-tester.git'
 
         APP_VERSION = '3.0.0'
         // 실습 넘버링
